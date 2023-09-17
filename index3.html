@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product Comparison Layout &amp; Effect</title>
+	<meta name="description"
+		content="Blueprint: A basic responsive product grid layout with comparison functionality" />
+	<meta name="keywords" content="html, css, javascript, grid, layout, effect, product comparison" />
+	<meta name="author" content="Codrops/" />
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="static/css/component2.css" />
+	<!-- Modernizr is used for flexbox fallback -->
+	<script src="js/modernizr.custom.js"></script>
+	
+	<script src="static/js/autocomplete.js"></script>
+</head>
+
+<body>
+	<!-- Compare basket -->
+	<div class="compare-basket">
+		<button class="action action--button action--compare"><i class="fa fa-check"></i><span
+				class="action__text">Compare</span></button>
+	</div>
+	<!-- Main view -->
+	<div class="view">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<h1> PricePal <span
+					data-content="The  MarketPlace is a collection of basic and minimal GeM website, Where we can compare and Buy Products."></span>
+			</h1>
+			<nav>
+				<a href="google.com" class="bp-icon bp-icon-prev" data-info="previous Blueprint"><span>User
+						Login</span></a>
+
+				<a href="google.com" class="bp-icon bp-icon-drop" data-info="back to the Codrops article"><span>Seller
+						Login</span></a>
+				<a href="google.com" class="bp-icon bp-icon-archive" data-info="Blueprints archive"><span>Go to the
+						archive</span></a>
+				
+			</nav>
+			<div class="search-bar">
+				<form method="POST" action="/process_search">
+					<label for="search_query">Enter your query:</label>
+					<input type="text" id="search_query" name="user_query" placeholder="Enter your query" required>
+					
+						
+					
+					
+				<button class="search-button">Search</button>
+				<button class="action action--filter"><i class="fa fa-filter"></i><span class="action__text">Filter</span></button>
+				<div id="autocomplete-suggestions"></div>
+			</div>
+			
+			<span class="Recommendation"> Few Recommendation for you </span>
+		</header>
+		<!-- Product grid -->
+
+
+		<!-- The Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <!-- Your sign-in and sign-up forms can go here -->
+        <h2>Sign In or Sign Up </h2>
+        <form action="/login.html" method="post">
+            <!-- Your sign-in form fields -->
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Don't have an account? <a href="/signup.html">Sign Up</a></p>
+        
+        <!-- Add "Not Now" button to close the modal without signing in -->
+        <button id="notNowBtn">Not Now</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<section class="grid">
+			<!-- Products -->
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/1.png" alt= "Product 1" />
+					<h3 class="product__title">CYNIX Intel Core i3 12100 8 GB/ 1000 GB HDD</h3>
+					<span class="product__year extra highlight">2005</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">CYNIX</span>
+					<span class="product__alcohol extra highlight">Discount:- 91%</span>
+					<span class="product__price highlight">₹ 9,000.00</span>
+					<a href="https://mkp.gem.gov.in/desktop-computers/cynix-intel-core-i3-12100-8-gb-1000/p-5116877-50016549794-cat.html#variant_id=5116877-50016549794">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/2.png" alt="Product 2" />
+					<h3 class="product__title">hp Intel Core i7 12700 16 GB/ 1000 GB HDD</h3>
+					<span class="product__year extra highlight">2020</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">HP</span>
+					<span class="product__alcohol extra highlight">Discount:- 91%</span>
+					<span class="product__price highlight">₹ 10,400.00</span>
+					<a href="https://mkp.gem.gov.in/desktop-computers/hp-280-g9-sff-i7-12700-win11p-16512ssd13/p-5116877-48289677675-cat.html#variant_id=5116877-48289677675">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/3.png" alt="Product 3" />
+					<h3 class="product__title">INP Intel Core i5 12500 8 GB/ 1000 GB HDD</h3>
+					<span class="product__year extra highlight">2013</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">INP</span>
+					<span class="product__alcohol extra highlight">Discount:- 91%</span>
+					<span class="product__price highlight">₹ 13,000.00</span>
+					<a href="https://mkp.gem.gov.in/desktop-computers/desktop-computer/p-5116877-21825811759-cat.html#variant_id=5116877-21825811759">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/4.png" alt="Product 4" />
+					<h3 class="product__title">hp Intel Core i5 12400 16 GB/ 1000 GB HDD</h3>
+					<span class="product__year extra highlight">2012</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">HP</span>
+					<span class="product__alcohol extra highlight">Discount:- 90%</span>
+					<span class="product__price highlight">₹ 10,130.44</span>
+					<a href="https://mkp.gem.gov.in/desktop-computers/hp-280-g9-mt-i5-12400-win10p-161256ssd3/p-5116877-80099643129-cat.html#variant_id=5116877-80099643129">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/5.png" alt="Product 5" />
+					<h3 class="product__title">Urvashi Computers Aadhaar Kit URVASHI</h3>
+					<span class="product__year extra highlight">2009</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">Urvashi Computers </span>
+					<span class="product__alcohol extra highlight">Discount:- 25%</span>
+					<span class="product__price highlight">₹150,000.00</span>
+					<a href="https://mkp.gem.gov.in/aadhaar-enrolment-kit/urvashi-computers-desktop-based-aadhaar-enrolment-kit/p-5116877-61723212057-cat.html#variant_id=5116877-61723212057">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/6.png" alt="Product 6" />
+					<h3 class="product__title">JIO Desktop Thin Client 4 GB RAMa</h3>
+					<span class="product__year extra highlight">2011</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">JIO Sauvignon</span>
+					<span class="product__alcohol extra highlight">Discount: 10%</span>
+					<span class="product__price highlight">₹5,750.00</span>
+					<a href="https://mkp.gem.gov.in/thin-client-computers-v2/jiopc/p-5116877-9745996963-cat.html#variant_id=5116877-9745996963">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/7.png" alt="Product 7" />
+					<h3 class="product__title">SMART STATION Desktop Thin Client 4 GB RAM</h3>
+					<span class="product__year extra highlight">2006</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">SMART STATION</span>
+					<span class="product__alcohol extra highlight">Discount:- 32%</span>
+					<span class="product__price highlight">₹19,116.00</span>
+					<a href="https://mkp.gem.gov.in/thin-client-computers-v2/smart-9530-4gb-ram-128gb-storage/p-5116877-28276008488-cat.html#variant_id=5116877-28276008488">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/8.png" alt="Product 8" />
+					<h3 class="product__title">SPECTRA THIN CLIENT Desktop Thin Client 4 GB</h3>
+					<span class="product__year extra highlight">2010</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">SPECTRA</span>
+					<span class="product__alcohol extra highlight">Discount:- 15%</span>
+					<span class="product__price highlight">₹21,294.00</span>
+					<a href="https://mkp.gem.gov.in/thin-client-computers-v2/thin-client-computers-version-2-0/p-5116877-87181113398-cat.html#variant_id=5116877-87181113398">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/9.png" alt="Product 9" />
+					<h3 class="product__title">GALAXY FURNITURE Revolving Chair With Arm...</h3>
+					<span class="product__year extra highlight">2009</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">GALAXY</span>
+					<span class="product__alcohol extra highlight">Discount:- 79%</span>
+					<span class="product__price highlight">₹2,000.00</span>
+					<a href="https://mkp.gem.gov.in/revolving-chair-v2/revolving-chair/p-5116877-62370620387-cat.html#variant_id=5116877-62370620387">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/10.png" alt="Product 10"width="100" />
+					<h3 class="product__title">Asha Furniture & Interior Revolving Chair …</h3>
+					<span class="product__year extra highlight">2011</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">Asha Furniture </span>
+					<span class="product__alcohol extra highlight">Discount:- 43%</span>
+					<span class="product__price highlight">₹2,000.00</span>
+					<a href="https://mkp.gem.gov.in/revolving-chair-v2/revolving-chair-version-2/p-5116877-32768062124-cat.html#variant_id=5116877-32768062124">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/11.png" alt="Product 11" />
+					<h3 class="product__title">Asha Furniture & Interior Revolving Chair …</h3>
+					<span class="product__year extra highlight">2009</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">Asha Furniture</span>
+					<span class="product__alcohol extra highlight">Discount:- 64%</span>
+					<span class="product__price highlight">₹2,000.00</span>
+					<a href="https://mkp.gem.gov.in/revolving-chair-v2/revolving-chair-without-arm-synchronic-tilt-mechanism/p-5116877-2281657621-cat.html#variant_id=5116877-2281657621">
+					<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+							class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><i nput class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+			<div class="product">
+				<div class="product__info">
+					<img class="product__image" src="static/images/13.jpg" alt="Product 12" />
+					<h3 class="product__title">Saaras Organic Food</h3>
+					<span class="product__year extra highlight">2009</span>
+					<span class="product__region extra highlight">India</span>
+					<span class="product__varietal extra highlight">LOGO</span>
+					<span class="product__alcohol extra highlight">13%</span>
+					<span class="product__price highlight">Rs 200</span>
+					<a href="https://mkp.gem.gov.in/exclusive-estore-unique-seller-groups-aajeevika-saras-grocery-and-pantry-version-3-/search#/?q=saras">
+						<button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+								class="action__text">Add to cart</span></button></a>
+				</div>
+				<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+						class="fa fa-plus"></i><i class="fa fa-check"></i><span
+						class="action__text action__text--invisible">Add to compare</span></label>
+			</div>
+		</section>
+	</div><!-- /view -->
+	
+	<!-- product compare wrapper -->
+	<section class="compare">
+		<button class="action action--close"><i class="fa fa-remove"></i><span
+				class="action__text action__text--invisible">Close comparison overlay</span></button>
+	</section>
+	<script src="static/js/classie.js"></script>
+	<script src="static/js/main.js"></script>
+	<script src="static/js/modal.js"></script>
+</body>
+
+</html>

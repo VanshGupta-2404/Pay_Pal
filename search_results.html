@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    <h2>Flipkart Results</h2>
+    {% if flipkart_results %}
+        <div>
+            <img src="{{ flipkart_results[0].Image }}" alt="{{ flipkart_results[0].Name }}" width="100"><br>
+            <strong>Name:</strong> {{ flipkart_results[0].Name }}<br>
+            <strong>Price:</strong> {{ flipkart_results[0].Price }}<br>
+            <strong>Stars:</strong> {{ flipkart_results[0].Stars }}<br>
+            <!-- Add more fields as needed -->
+        </div>
+    {% else %}
+        <p>No Flipkart results found.</p>
+    {% endif %}
+
+    <h2>GeM Results</h2>
+    {% if gem_results %}
+        <div>
+            <img src="{{ gem_results[0].Image }}" alt="{{ gem_results[0].Name }}" width="100"><br>
+            <strong>Name:</strong> {{ gem_results[0].Name }}<br>
+            <strong>Price:</strong> {{ gem_results[0].Price }}<br>
+            <strong>Stars:</strong> {{ gem_results[0].Stars }}<br>
+            <!-- Add more fields as needed -->
+        </div>
+    {% else %}
+        <p>No GeM results found.</p>
+    {% endif %}
+
+    <h2>Amazon Results</h2>
+    {% if amazon_results %}
+        <div>
+            <img src="{{ amazon_results[0].Image }}" alt="{{ amazon_results[0].Name }}" width="100"><br>
+            <strong>Name:</strong> {{ amazon_results[0].Name }}<br>
+            <strong>Price:</strong> {{ amazon_results[0].Price }}<br>
+            <strong>Stars:</strong> {{ amazon_results[0].Stars }}<br>
+            <!-- Add more fields as needed -->
+        </div>
+    {% else %}
+        <p>No Amazon results found.</p>
+    {% endif %}
+</body>
+</html>

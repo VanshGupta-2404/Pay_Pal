@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for '{{ user_query }}'</h1>
+
+    {% if search_results %}
+    <ul>
+        {% for result in search_results %}
+        <li>
+            <strong>Phone Names:</strong> {{ result.Names}}<br>
+            <strong>Price:</strong> {{ result.Price }}<br>
+            <strong>Stars:</strong> {{ result.Stars }}<br>
+            <!-- Display the image using the 'image' field -->
+            <img src="{{ result.image }}" alt="{{ result.Names }} Image">
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No results found for '{{ user_query }}'</p>
+    {% endif %}
+</body>
+</html>

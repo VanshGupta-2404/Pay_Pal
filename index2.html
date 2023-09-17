@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PricePal</title>
+    <meta name="description"
+        content="Blueprint: A basic responsive product grid layout with comparison functionality" />
+    <meta name="keywords" content="html, css, javascript, grid, layout, effect, product comparison" />
+    <meta name="author" content="Codrops/Shukla ji" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/component.css" />
+    <!-- Modernizr is used for flexbox fallback -->
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+    <!-- Compare basket -->
+    <div class="compare-basket">
+        <button class="action action--button action--compare"><i class="fa fa-check"></i><span
+                class="action__text">Compare</span></button>
+        <!-- Add some text here or apply CSS styles to set the height -->
+    </div>
+    
+    <!-- Main view -->
+    <div class="view">
+        <!-- Blueprint header -->
+        <header class="bp-header cf">
+            <h1>PricePal<span
+                    data-content=l "The Shukla MarketPlace is a collection of basic and minimal GeM website, Where we can compare and Buy Products."></span>
+            </h1>
+            <nav>
+                <a href="google.com" class="bp-icon bp-icon-prev" data-info="USER LOGIN"><span>User
+                       Login</span></a>
+
+                <a href="google.com" class="bp-icon bp-icon-drop" data-info="Seller login"><span>Seller
+                        Login</span></a>
+                <a href="google.com" class="bp-icon bp-icon-archive" data-info="Support"><span>Go to the
+                        archive</span></a>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="productLink" placeholder="Paste product link or Search Product">
+                <button class="search-button">Search</button>
+                <button class="action action--track"><i class="fa fa-money"></i><span class="action__text">Price Track</span></button>
+            </div>
+            <span class="Recommendation"> Here are Some results that you're looking for </span>
+        </header>
+        <!-- Product grid -->
+        <section class="grid">
+            <!-- Products -->
+     
+            <div class="product">
+				<div class="product__info">
+                    <h2 class="PricePal">Amazon</h2>
+					<img class="product__image"src="{{ amazon_results[0].Image }}" alt="AMAZON" width="50" />
+                    {% if amazon_results %}
+					<h3 class="product__title"><strong>Name:</strong> {{ amazon_results[0].Name }}</h3>
+					<span class="product__year extra highlight"><strong>Specifications:</strong> {{ amazon_results[0].Highlight }}</span>
+                    <span class="product__alcohol extra highlight"><strong>Stars:</strong> {{ amazon_results[0].Star }}</span>
+					<span class="product__price highlight"><strong>Price:</strong> {{ amazon_results[0].Price }}</span>
+					
+					<a href=
+                    "https://www.amazon.in/BitFry-Core-Computer-Business-Generation/dp/B0BS38ZBDZ/ref=sr_1_6?crid=2RUFHW2BON5LE&keywords=computers%2Bcpu%2Bi7&qid=1694792455&sprefix=%2Caps%2C584&sr=8-6&th=1">
+                        <button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+                                class="action__text">Add to cart</span></button>
+                    </a>
+                    {% else %}
+                    <p>No Amazon results found.</p>
+                    {% endif %}
+                                       
+                </div>
+                <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+                        class="fa fa-plus"></i><i class="fa fa-check"></i><span
+                        class="action__text action__text--invisible">Add to compare</span></label>
+            </div>
+			
+            
+            <div class="product">
+				<div class="product__info">
+                    <h2 class="PricePal">Flipkart</h2>
+					<img class="product__image" src="{{ flipkart_results[0].Image }}" alt="{{ flipkart_results[0].Name }}" width="70"  />
+                    {% if flipkart_results %}
+					<h4 class="product__title"><strong>Name:</strong> {{ flipkart_results[0].Name }}</h4>
+					<span class="product__year extra highlight"><strong>Specifications:</strong> {{ flipkart_results[0].Highlight }}</span>
+					<span class="product__alcohol extra highlight"><strong>Stars:</strong> {{ flipkart_results[0].Star }}</span>
+					<span class="product__price highlight"><strong>Price:</strong> {{ flipkart_results[0].Price }}</span>
+					<a href="https://www.flipkart.com/enter-intel-core-i7-860-16-gb-ram-gt730ddr5-graphics-1000-hard-disk-256-ssd-capacity-windows-10-64-bit-2-graphics-memory-gaming-tower-ms-office/p/itm63be6f4055154?pid=CPUGG78G4GYTVRQR&lid=LSTCPUGG78G4GYTVRQROIWRXT&marketplace=FLIPKART&q=computers+cpu+i7+enter+intel&store=6bo%2Fnl4%2Fdze&srno=s_1_1&otracker=search&otracker1=search&fm=Search&iid=b678e7d6-ce51-45cb-8006-7dedb76d904a.CPUGG78G4GYTVRQR.SEARCH&ppt=sp&ppn=sp&ssid=ae3gcv9rmo0000001694792667723&qH=ea56e53a25df5224">
+                        <button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i><span
+                                class="action__text">Add to cart</span></button>
+                    </a>
+				
+						{% else %}
+						<p>No Flipkart results found.</p>
+						{% endif %}
+						
+					</div>
+					<label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+							class="fa fa-plus"></i><i class="fa fa-check"></i><span
+							class="action__text action__text--invisible">Add to compare</span></label>
+				</div>
+                <div class="product">
+                    <div class="product__info">
+                        <h2 class="PricePal">GeM</h2>
+                        <img class="product__image" src="{{ gem_results[0].Image }}" alt="{{ gem_results[0].Name }} "width="70" />
+                        {% if gem_results %}
+                        <h3 class="product__title"><strong>Name:</strong> {{ gem_results[0].Name }}</h3>
+                        <span class="product__year extra highlight"><strong>Specifications:</strong> {{ gem_results[0].Highlight }}</span>
+                        <span class="product__alcohol extra highlight"><strong>Stars:</strong> {{ gem_results[0].Star }}</span>
+                        <span class="product__price highlight"><strong>Price:</strong> {{ gem_results[0].Price }}</span>
+                        <a href=
+                            "https://mkp.gem.gov.in/desktop-computers/hp-280-g9-sff-i7-12700-win11p-16512ssd13/p-5116877-48289677675-cat.html#variant_id=5116877-48289677675">
+                            <button class="action action--button action--buy"><i class="fa fa-shopping-cart"></i>
+                                <span class="action__text">Add to cart</span></button>
+                            </a>
+                    </div>
+                    <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+                            class="fa fa-plus"></i><i class="fa fa-check"></i><span
+                            class="action__text action__text--invisible">Add to compare</span></label>
+                
+                        {% else %}
+                        <p>No GeM results found.</p>
+                        {% endif %}
+                        
+                        </div>
+                        <label class="action action--compare-add"><input class="check-hidden" type="checkbox" /><i
+                                class="fa fa-plus"></i><i class="fa fa-check"></i><span
+                                class="action__text action__text--invisible">Add to compare</span></label>
+                    </div>
+			</section>
+		</div><!-- /view -->
+	
+		<!-- product compare wrapper -->
+		<section class="compare">
+			<button class="action action--close"><i class="fa fa-remove"></i><span
+					class="action__text action__text--invisible">Close comparison overlay</span></button>
+		</section>
+		<script src="static/js/classie.js"></script>
+		<script src="static/js/main.js"></script>
+	</body>
+	
+	</html>
