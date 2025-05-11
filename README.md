@@ -1,12 +1,12 @@
 ---
 
-# 🛒 Pay\_Pal: GeM vs. E-Commerce Price Comparison Tool
+# 🛒 Pay_Pal: GeM vs. E-Commerce Price Comparison Tool
 
-**Repository:** [Pay\_Pal](https://github.com/VanshGupta-2404/Pay_Pal)
+**Repository:** [Pay_Pal](https://github.com/VanshGupta-2404/Pay_Pal)
 
 ## 📌 Overview
 
-**Pay\_Pal** is a web-based application designed to compare product prices between the Government e-Marketplace (GeM) and leading e-commerce platforms such as Amazon and Flipkart. This tool aims to highlight pricing differences, offering insights into cost-effective procurement options.
+**Pay_Pal** is a web-based application designed to compare product prices between the Government e-Marketplace (GeM) and leading e-commerce platforms such as Amazon and Flipkart. This tool aims to highlight pricing differences, offering insights into cost-effective procurement options.
 
 ## 🎯 Objectives
 
