@@ -1,5 +1,3 @@
----
-
 ```markdown
 # 🛒 Pay_Pal: GeM vs. E-Commerce Price Comparison Tool
 
